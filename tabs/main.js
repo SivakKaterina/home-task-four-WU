@@ -20,5 +20,31 @@ tabs.addEventListener('click', (e) => {
   }
 });
 
+// task 2
+const tabsDop = document.getElementById('wrap-btn-dop');
+const contentDop = document.querySelectorAll('.content-dop');
+
+const changeClassDop =  el => {
+  for (let i = 0; i < tabsDop.children.length; i++){
+    tabsDop.children[i].classList.remove('active');
+  }
+  el.classList.add('active');
+};
+
+tabsDop.addEventListener('click', (e) => {
+  const currTab = e.target.dataset.btndop;
+  changeClassDop(e.target);
+
+  for (let i = 0; i < contentDop.length; i++) {
+    contentDop[i].classList.remove('active');
+    console.log(contentDop[i].dataset.contentdop);
+    if (contentDop[i].dataset.contentdop === currTab) {
+      contentDop[i].classList.add('active');
+    }
+  }
+});
+
+
+
 
 
