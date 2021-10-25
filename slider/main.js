@@ -53,7 +53,7 @@ dots.forEach((item, indexDot) => {
 
 // task 2
 // setTimeout("nextSlide()", 3000);
-setInterval("nextSlide()", 5000);
+setInterval(nextSlide, 2000);
 
 btnPrev.addEventListener('click', prevSlide);
 btnNext.addEventListener('click', nextSlide);
